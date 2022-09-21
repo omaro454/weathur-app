@@ -11,10 +11,10 @@ function initPage() {
     var historyEl = document.getElementById("history");
     let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
     console.log(searchHistory);
-    var APIKey = "c9a9ed03a355403f4cb9a36e931c0b4a";
+    var APIKey = "e0466e8ff3c9b519f116bacd3c6b0d78";
 
     function getWeather(cityName) {
-        let queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + cityName + "&appid=" + APIKey;
+        let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIKey;
         axios.get(queryURL)
         .then(function(response){
             console.log(response);
